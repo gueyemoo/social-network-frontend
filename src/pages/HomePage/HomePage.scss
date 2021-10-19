@@ -1,0 +1,17 @@
+.playlist-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px auto;
+
+    .playlist-container-title{
+        margin-left: 35px;
+    }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
+}

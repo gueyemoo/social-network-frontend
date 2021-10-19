@@ -1,0 +1,130 @@
+$base-color: #ff7700;
+$secondary-color: #333;
+$third-color: #999999;
+
+.navbar-container {
+  display: flex;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    width: 10%;
+    color: $base-color;
+  }
+}
+
+.switch-button{
+  background-color: #ccc;
+  margin: auto 10px;
+}
+
+.ant-switch-checked{
+  background-color: $base-color;
+}
+
+.navbar-container-left-side {
+  float: left;
+  //   margin-left: 5%;
+}
+
+.navbar-container-right-side {
+  float: right;
+  margin-right: 3%;
+}
+
+.navbar-list-container {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: $secondary-color;
+}
+
+.navbar-item-list {
+  float: left;
+  
+  a {
+    display: block;
+    color: #ccc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  a:hover:not(.active) {
+   color: #fff;
+  }
+}
+
+
+.searchbox {
+  margin-top: 10px;
+  margin-left: 5rem;
+}
+
+.active {
+  background-color: #111;
+  color: #fff;
+}
+
+.active:hover {
+  color: #fff;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+.navbar ul ul {
+  display: none;
+  position: absolute;
+}
+
+/* Display Dropdowns on Hover */
+.navbar ul .navbar-item-list:hover > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tier Dropdown */
+.navbar ul ul .navbar-item-list {
+  min-width: 110px;
+  display: list-item;
+  position: relative;
+}
+
+/* Add responsivness */
+@media screen and (max-width: 1024px) {
+  .navbar-item-list {
+    float: none;
+    display: block;
+  }
+
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      width: auto;
+    }
+  }
+
+  .navbar-container-left-side {
+    margin: 0;
+  }
+  .navbar-container-right-side {
+    margin: 0;
+  }
+
+  .searchbox {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul {
+    .navbar-item-list:last-child {
+      display: none;
+    }
+  }
+}
+
+

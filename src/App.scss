@@ -1,0 +1,79 @@
+@import "./components/Navbar/Navbar.scss";
+@import "./components/Chat/Chat.scss";
+@import "./components/SongCarousel/SongCarousel.scss";
+@import "./components/SongGrid/SongGrid.scss";
+
+@import "./pages/HomePage/HomePage.scss";
+@import "./pages/ChatPage/ChatPage.scss";
+@import "./pages/DiscoverPage/DiscoverPage.scss";
+//Structure
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+}
+
+.layout-container {
+  height: 100vh;
+}
+
+.chat {
+  width: 20%;
+  background-color: #eee;
+  border-left: 1px solid #000;
+}
+
+.chatClose {
+  background-color: #ddd;
+  border-left: 1px solid #000;
+  width: 3%;
+  padding: 20px;
+  font-weight: bold;
+}
+
+//Fin structure
+
+//Inscription / Connection
+
+#globale {
+  border: 2px solid black;
+  width: 75%;
+  margin: 20px;
+}
+
+.insc {
+  margin: 20px;
+}
+
+.react-jinke-music-player-main 
+.music-player-panel 
+.panel-content 
+.rc-slider-handle, 
+.react-jinke-music-player-main 
+.music-player-panel 
+.panel-content 
+.rc-slider-track {
+    background-color: #ff7700 !important;
+}
+
+.player-content svg:hover{
+  color: #ff7700 !important;
+}
+
+.react-jinke-music-player .music-player-controller{
+  color: #ff7700 !important;
+}
+
+.music-player-controller-setting{
+  content: 'Ouvrir' !important;
+  background: #ff770070 !important;
+}
+
