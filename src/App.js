@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Locale from 'react-jinke-music-player/lib/config/locale'
 
 import './App.scss';
@@ -17,6 +17,7 @@ import Chat from './components/Chat/Chat';
 import HomePage from './pages/HomePage/HomePage';
 import ChatPage from './pages/ChatPage/ChatPage';
 import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
+import MusicGenderPage from './pages/MusicGenderPage/MusicGenderPage';
 
 import ReactJkMusicPlayer from 'react-jinke-music-player'
 import 'react-jinke-music-player/assets/index.css'
@@ -138,7 +139,6 @@ function App() {
           {/* set home page as default when rendering */}
           <Redirect exact from="/" to="/Home" />
           <Navbar passChildData={setChildData} />
-          {console.log(childData)}
           <div className="app-container">
 
             <div className="main" style={childData === false ? { width: '97%', overflow: 'hidden' } : { width: '80%', overflow: 'hidden' }} >
@@ -149,11 +149,13 @@ function App() {
                       <HomePage />
                     </Route>
                     <Route exact path="/Chat">
-                      <ChatPage/>
+                      <ChatPage />
                     </Route>
                     <Route exact path="/Discover">
-                      <DiscoverPage/>
+                      <DiscoverPage />
                     </Route>
+                    <Route path="/Discover/:id" component={MusicGenderPage} />
+
                   </Switch>
                 </div>
               </Layout>
@@ -175,7 +177,7 @@ function App() {
               </Slide>
             )}
             <div className="footer">
-                <ReactJkMusicPlayer mobileMediaQuery="(max-width: 1024px)" audioLists={audioList} />
+              <ReactJkMusicPlayer mobileMediaQuery="(max-width: 1024px)" audioLists={audioList} />
             </div>
           </div>
         </div >
