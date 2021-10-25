@@ -9,6 +9,9 @@ import { Form, Input, Button, Checkbox } from 'antd';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
+import { Row } from 'antd';
+import { Col } from 'antd';
+
 
 
 import Navbar from './components/Navbar/Navbar';
@@ -64,14 +67,20 @@ function App() {
     <>
       {login === false ? (
         <div id="globale">
+          <Row>
+            <Col span={12}>
+              <div id="divDescription">
+                <h1 id='headerLogin'>PlayLoud</h1>
+                <p id='headerDesc'>Avec PlayLoud, écoutez de la musique et partagez vos sensations avec votre entourage.</p>
+              </div>
+            </Col>
+
+            <Col span={12}>
+            <div id="divForm" >
+          <Row type="flex" justify="center" align="center">
+            <Col span={16} >
           <Form
             name="basic"
-            labelCol={{
-              span: 2,
-            }}
-            wrapperCol={{
-              span: 4,
-            }}
             initialValues={{
               remember: true,
             }}
@@ -79,13 +88,14 @@ function App() {
             onFinishFailed={onFinishFailed}
             autoComplete="off"
           >
+            <legend>Connectez vous !</legend>
             <Form.Item
-              label="Username"
+              label="Identifiant"
               name="username"
               rules={[
                 {
                   required: true,
-                  message: 'Please input your username!',
+                  message: 'Saisissez votre identifiant!',
                 },
               ]}
             >
@@ -93,12 +103,12 @@ function App() {
             </Form.Item>
 
             <Form.Item
-              label="Password"
+              label="Mot de passe"
               name="password"
               rules={[
                 {
                   required: true,
-                  message: 'Please input your password!',
+                  message: 'Saisissez votre mot de passe!',
                 },
               ]}
             >
@@ -110,10 +120,11 @@ function App() {
               valuePropName="checked"
               wrapperCol={{
                 offset: 2,
-                span: 4,
+                span: 8,
               }}
             >
-              <Checkbox>Remember me</Checkbox>
+              <Checkbox>
+                  Se souvenir de moi</Checkbox>
             </Form.Item>
 
             <Form.Item
@@ -126,11 +137,28 @@ function App() {
                 Se connecter
               </Button>
             </Form.Item>
+
+            <hr></hr>
+              <br/>
+            <Form.Item
+              wrapperCol={{
+                offset: 2,
+                span: 8,
+              }}
+            >
+              <label>Vous n'êtes pas inscrit ?</label>
+              <Button type="secondary" htmlType="submit">
+                Créer un compte
+              </Button>
+            </Form.Item>
           </Form>
-          <hr></hr>
-          <Button type="primary" class="insc" htmlType="submit">
-            Créer un compte
-          </Button>
+          </Col>
+        </Row>
+        </div>
+            </Col>
+          </Row>
+
+          
         </div>
       ) : (
         //if logged in        

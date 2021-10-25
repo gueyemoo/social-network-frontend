@@ -43,11 +43,29 @@ body{
 
 //Inscription / Connection
 
+
 #globale {
-  border: 2px solid black;
-  width: 75%;
-  margin: 20px;
+  width:80%;
+  margin: auto;
+  padding-top: 5%;
 }
+
+#divForm {
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px;
+}
+
+#headerDesc {
+  font-size: 1.8em;
+  width: 75%;
+}
+
+#headerLogin {
+  color: #ff7700;
+  font-size: 9em;
+}
+
 
 .insc {
   margin: 20px;
