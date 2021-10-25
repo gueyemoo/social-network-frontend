@@ -1,9 +1,8 @@
 import React from 'react'
 
 import {
-  ChatEngine, ChatList, ChatCard, NewChatForm,
-  ChatFeed, ChatHeader, IceBreaker, MessageBubble, IsTyping, ConnectionBar, NewMessageForm,
-  ChatSettings, ChatSettingsTop, PeopleSettings, PhotosSettings, OptionsSettings
+  ChatEngine, ChatCard, NewChatForm,
+  ChatFeed, ChatHeader, MessageBubble, IsTyping, NewMessageForm,
 } from 'react-chat-engine';
 
 

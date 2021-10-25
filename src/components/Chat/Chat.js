@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { Avatar, List, Typography } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
