@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Locale from 'react-jinke-music-player/lib/config/locale'
 
 import './App.scss';
 
@@ -28,9 +27,6 @@ import 'react-jinke-music-player/assets/index.css'
 
 function App() {
 
-  const customLocale = {
-    controllerTitle: 'Ouvrir',
-  }
   const audioList = [
     {
       name: 'No Time',
