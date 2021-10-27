@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { NavLink } from 'react-router-dom';
 import { HomeOutlined, GlobalOutlined, BookOutlined, UploadOutlined, UserOutlined, BellOutlined, MenuOutlined } from '@ant-design/icons';
 import { Input, Switch } from 'antd';
