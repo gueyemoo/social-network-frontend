@@ -28,7 +28,7 @@ const NavBar = (props) => {
                         </li>
 
                         <li className="navbar-item-list">
-                            <NavLink exact to="/Library" activeClassName="active"> <BookOutlined style={{ fontSize: '24px' }} />Bibliothèque</NavLink>
+                            <NavLink exact to="/Bibliotheque" activeClassName="active"> <BookOutlined style={{ fontSize: '24px' }} />Bibliothèque</NavLink>
                         </li>
                     </div>
 

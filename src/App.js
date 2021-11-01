@@ -20,6 +20,7 @@ import HomePage from './pages/HomePage/HomePage';
 import ChatPage from './pages/ChatPage/ChatPage';
 import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
 import MusicGenderPage from './pages/MusicGenderPage/MusicGenderPage';
+import BiblioPage from './pages/BiblioPage/BiblioPage';
 
 import ReactJkMusicPlayer from 'react-jinke-music-player'
 import 'react-jinke-music-player/assets/index.css'
@@ -179,7 +180,9 @@ function App() {
                       <DiscoverPage />
                     </Route>
                     <Route path="/Discover/:id" component={MusicGenderPage} />
-
+                    <Route exact path="/Bibliotheque">
+                      <BiblioPage/>
+                    </Route>
                   </Switch>
                 </div>
               </Layout>
