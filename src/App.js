@@ -65,7 +65,7 @@ function App() {
     <>
       {login === false ? (
         <div id="globale">
-          <Row>
+          <Row >
             <Col span={12}>
               <div id="divDescription">
                 <h1 id='headerLogin'>PlayLoud</h1>
@@ -74,7 +74,7 @@ function App() {
             </Col>
 
             <Col span={12}>
-            <div id="divForm" >
+            <div id="divForm"  >
           <Row type="flex" justify="center" align="center">
             <Col span={16} >
           <Form
@@ -117,7 +117,7 @@ function App() {
               name="remember"
               valuePropName="checked"
               wrapperCol={{
-                offset: 2,
+                offset: 0,
                 span: 8,
               }}
             >
@@ -127,7 +127,7 @@ function App() {
 
             <Form.Item
               wrapperCol={{
-                offset: 2,
+                offset: 0 ,
                 span: 4,
               }}
             >
@@ -140,7 +140,7 @@ function App() {
               <br/>
             <Form.Item
               wrapperCol={{
-                offset: 2,
+                offset: 0,
                 span: 8,
               }}
             >
