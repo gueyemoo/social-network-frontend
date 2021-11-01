@@ -1,0 +1,18 @@
+.biblio-nav{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    h2{
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+}
+
+.biblio-main{
+    height: 600px;
+    overflow-y: scroll;
+    width: 100%;
+}
