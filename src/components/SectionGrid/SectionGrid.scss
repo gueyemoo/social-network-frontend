@@ -1,0 +1,14 @@
+.image-section-grid {
+  display: flex;
+
+  img {
+    height: 175px;
+    width: 175px;
+    margin: auto 30px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}
