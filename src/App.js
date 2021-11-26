@@ -39,12 +39,12 @@ function App() {
         'https://res.cloudinary.com/dfbypuwpt/video/upload/v1634130906/ksi-lildurk-no-time.mp3',
     },
     {
-      name: 'Dorost Nemisham',
-      singer: 'Sirvan Khosravi',
+      name: 'Smooth Operator',
+      singer: 'Sade',
       cover:
-        'https://res.cloudinary.com/ehsanahmadi/image/upload/v1573758778/Sirvan-Khosravi-Dorost-Nemisham_glicks.jpg',
+        'https://res.cloudinary.com/dfbypuwpt/image/upload/v1637935817/Sade_sd5xii.jpg',
       musicSrc:
-        'https://res.cloudinary.com/ehsanahmadi/video/upload/v1573550770/Sirvan-Khosravi-Dorost-Nemisham-128_kb8urq.mp3',
+        'https://res.cloudinary.com/dfbypuwpt/video/upload/v1637935703/sade-smooth-operator-official-1984_zbil2y.mp3',
     },
   ]
 
