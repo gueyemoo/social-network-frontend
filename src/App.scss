@@ -2,11 +2,13 @@
 @import "./components/Chat/Chat.scss";
 @import "./components/SongCarousel/SongCarousel.scss";
 @import "./components/SongGrid/SongGrid.scss";
+@import "./components/SectionGrid/SectionGrid.scss";
 
 @import "./pages/HomePage/HomePage.scss";
 @import "./pages/ChatPage/ChatPage.scss";
 @import "./pages/DiscoverPage/DiscoverPage.scss";
 @import "./pages/MusicGenderPage/MusicGenderPage.scss";
+@import "./pages/BiblioPage/BiblioPage.scss";
 //Structure
 * {
   margin: 0;
