@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './App.scss';
 
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { Layout } from 'antd';
 import { Form, Input, Button, Checkbox } from 'antd';
 import Fade from 'react-reveal/Fade';
@@ -15,6 +15,7 @@ import { Col } from 'antd';
 
 import Navbar from './components/Navbar/Navbar';
 import Chat from './components/Chat/Chat';
+import Signup from './components/Signup/Signup';
 
 import HomePage from './pages/HomePage/HomePage';
 import ChatPage from './pages/ChatPage/ChatPage';
@@ -46,9 +47,13 @@ function App() {
     },
   ]
 
+  const location = useLocation();
+
   const [childData, setChildData] = useState(false);
 
   const [login, setLogin] = useState(false);
+
+  const [signup, setSignup] = useState(false);
 
   const onFinish = (values) => {
     console.log('Success:', values);
@@ -58,6 +63,10 @@ function App() {
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
+  };
+
+  const showForm = () => {
+    setSignup(!signup);
   };
 
   return (
@@ -73,91 +82,191 @@ function App() {
             </Col>
 
             <Col span={12}>
-            <div id="divForm"  >
-          <Row type="flex" justify="center" align="center">
-            <Col span={16} >
-          <Form
-            name="basic"
-            initialValues={{
-              remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off"
-          >
-            <legend>Connectez vous !</legend>
-            <Form.Item
-              label="Identifiant"
-              name="username"
-              rules={[
-                {
-                  required: true,
-                  message: 'Saisissez votre identifiant!',
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item>
 
-            <Form.Item
-              label="Mot de passe"
-              name="password"
-              rules={[
-                {
-                  required: true,
-                  message: 'Saisissez votre mot de passe!',
-                },
-              ]}
-            >
-              <Input.Password />
-            </Form.Item>
+              {signup ? (
+                console.log("inscription = " + signup),
+                <div id="divForm"  >
+                <Row type="flex" justify="center" align="center">
+                  <Col span={16} >
+                <Form
+                  name="basic"
+                  initialValues={{
+                    remember: true,
+                  }}
+                  onFinish={onFinish}
+                  onFinishFailed={onFinishFailed}
+                  autoComplete="off"
+                >
+                  <legend>Inscrivez vous !</legend>
+                  <Form.Item
+                    label="Identifiant"
+                    name="username"
+                    rules={[
+                      {
+                        required: true,
+                        message: 'Saisissez votre identifiant!',
+                      },
+                    ]}
+                  >
+                    <Input />
+                  </Form.Item>
 
-            <Form.Item
-              name="remember"
-              valuePropName="checked"
-              wrapperCol={{
-                offset: 0,
-                span: 8,
+                  <Form.Item
+                    label="Mot de passe"
+                    name="password"
+                    rules={[
+                      {
+                        required: true,
+                        message: 'Saisissez votre mot de passe!',
+                      },
+                    ]}
+                  >
+                    <Input.Password />
+                  </Form.Item>
+
+                  <Form.Item
+                    label="Confirmez le mot de passe"
+                    name="confirm"
+                    rules={[
+                      {
+                        required: true,
+                        message: 'Confirmez votre mot de passe!',
+                      },
+                    ]}
+                  >
+                    <Input.Password />
+                  </Form.Item>
+
+                  <Form.Item
+                    name="remember"
+                    valuePropName="checked"
+                    wrapperCol={{
+                      offset: 0,
+                      span: 8,
+                    }}
+                  >
+                    <Checkbox>
+                        Se souvenir de moi</Checkbox>
+                  </Form.Item>
+
+                  <Form.Item
+                    wrapperCol={{
+                      offset: 0 ,
+                      span: 4,
+                    }}
+                  >
+                    <Button type="primary" htmlType="submit">
+                      Créer votre compte
+                    </Button>
+                  </Form.Item>
+
+                  <hr></hr>
+                    <br/>
+                  <Form.Item
+                    wrapperCol={{
+                      offset: 0,
+                      span: 8,
+                    }}
+                  >
+                    <label>Vous avez déjà un compte ?</label>
+                    <Button type="secondary" onClick={showForm}>
+                      Se connecter
+                    </Button>
+                  </Form.Item>
+                </Form>
+                </Col>
+                </Row>
+                </div>
+              ) : (
+                console.log("connection = " + signup),
+
+          <div id="divForm"  >
+            <Row type="flex" justify="center" align="center">
+              <Col span={16} >
+            <Form
+              name="basic"
+              initialValues={{
+                remember: true,
               }}
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
+              autoComplete="off"
             >
-              <Checkbox>
-                  Se souvenir de moi</Checkbox>
-            </Form.Item>
+              <legend>Connectez vous !</legend>
+              <Form.Item
+                label="Identifiant"
+                name="username"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Saisissez votre identifiant!',
+                  },
+                ]}
+              >
+                <Input />
+              </Form.Item>
 
-            <Form.Item
-              wrapperCol={{
-                offset: 0 ,
-                span: 4,
-              }}
-            >
-              <Button type="primary" htmlType="submit">
-                Se connecter
-              </Button>
-            </Form.Item>
+              <Form.Item
+                label="Mot de passe"
+                name="password"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Saisissez votre mot de passe!',
+                  },
+                ]}
+              >
+                <Input.Password />
+              </Form.Item>
 
-            <hr></hr>
-              <br/>
-            <Form.Item
-              wrapperCol={{
-                offset: 0,
-                span: 8,
-              }}
-            >
-              <label>Vous n'êtes pas inscrit ?</label>
-              <Button type="secondary" htmlType="submit">
-                Créer un compte
-              </Button>
-            </Form.Item>
-          </Form>
-          </Col>
-        </Row>
-        </div>
+              <Form.Item
+                name="remember"
+                valuePropName="checked"
+                wrapperCol={{
+                  offset: 0,
+                  span: 8,
+                }}
+              >
+                <Checkbox>
+                    Se souvenir de moi</Checkbox>
+              </Form.Item>
+
+              <Form.Item
+                wrapperCol={{
+                  offset: 0 ,
+                  span: 4,
+                }}
+              >
+                <Button type="primary" htmlType="submit">
+                  Se connecter
+                </Button>
+              </Form.Item>
+
+              <hr></hr>
+                <br/>
+              <Form.Item
+                wrapperCol={{
+                  offset: 0,
+                  span: 8,
+                }}
+              >
+                <label>Vous n'êtes pas inscrit ?</label>
+                  <Button type="secondary" onClick={showForm}>
+                    Créer un compte
+                  </Button>
+              </Form.Item>
+            </Form>
             </Col>
-          </Row>
+            </Row>
+          </div>
+                )}
+              
+              </Col>
+            </Row>
 
-          
-        </div>
-      ) : (
+            
+          </div>
+        ) : (
         //if logged in        
         <div className="app">
           {/* set home page as default when rendering */}
