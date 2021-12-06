@@ -3,22 +3,32 @@
 }
 
 .uploadZone {
-    display: flex;
-    // height: 500px;
-    width: 50% !important;
+  display: flex;
+  // height: 500px;
+  width: 50% !important;
   margin: 30px auto;
   border: 1px solid black !important;
 }
 
-.confidentialZone{
-    display: flex;
-    justify-content: center;
+.confidentialZone {
+  display: flex;
+  justify-content: center;
 
-    input{
-        margin: 5px;
-    }
+  input {
+    margin: 5px;
+  }
 }
 
-.confidentialInfo{
-    color: #707070;
+.confidentialInfo {
+  color: #707070;
+}
+
+.mainUpload-container {
+  height: 700px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

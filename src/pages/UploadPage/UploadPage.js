@@ -32,7 +32,7 @@ const UploadPage = () => {
     const [uploadState, setUploadState] = useState('public')
 
     return (
-        <>
+        <div className="mainUpload-container">
             <Dragger {...props} className="uploadZone">
                 <Title className="ant-upload-text" level={4}>Glisser et déposer vos sons et albums içi</Title>
                 <p className="ant-upload-drag-icon">
@@ -47,18 +47,18 @@ const UploadPage = () => {
             <div className="confidentialZone">
                 <p>Confidentialité: </p>
                 <input type="radio" value="public" id="public"
-                    onClick={() => setUploadState('publique')} name="stateUpload" defaultChecked/>
+                    onClick={() => setUploadState('publique')} name="stateUpload" defaultChecked />
                 <label for="public">publique</label>
 
                 <input type="radio" value="private" id="private"
                     onClick={() => setUploadState('privé')} name="stateUpload" />
                 <label for="private">privé</label>
-                    <br/>
+                <br />
             </div>
             <div className="confidentialZone confidentialInfo">
                 <p>Vos sons seront {uploadState} sur la plateforme.</p>
             </div>
-        </>
+        </div>
     )
 }
 
