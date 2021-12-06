@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { NavLink } from 'react-router-dom';
-import { HomeOutlined, GlobalOutlined, BookOutlined, UploadOutlined, UserOutlined, BellOutlined, MenuOutlined } from '@ant-design/icons';
+import { HomeOutlined, GlobalOutlined, BookOutlined, UploadOutlined, UserOutlined, BellOutlined, MenuOutlined, LogoutOutlined } from '@ant-design/icons';
 import { Input, Switch } from 'antd';
 
 const { Search } = Input;
@@ -47,15 +47,15 @@ const NavBar = (props) => {
 
                         <li className="navbar-item-list">
                             <a href=""><BellOutlined style={{ fontSize: '24px' }} /> </a>
+                            <ul className="navbar-list-container" style={{zIndex:100}}>
+                                <li className="navbar-item-list"><NavLink exact to="/Bibliotheque">Consultez vos sons écoutez récemment </NavLink> <hr/></li>
+                                <li className="navbar-item-list"><NavLink exact to="/Chat">Vous avez reçu un nouveau message de Benjamin</NavLink> <hr/></li>
+                                <li className="navbar-item-list"><NavLink exact to="/Discover/1">Ecoutez les derniers sons RnB du moments</NavLink></li>
+                            </ul>
                         </li>
 
                         <li className="navbar-item-list">
-                            <a href=""><MenuOutlined style={{ fontSize: '24px' }} /> </a>
-                            <ul className="navbar-list-container">
-                                <li className="navbar-item-list"><a href="">Item 1</a></li>
-                                <li className="navbar-item-list"><a href="">Item 2</a></li>
-                                <li className="navbar-item-list"><a href="">Item 3</a></li>
-                            </ul>
+                            <a href="" title="Se déconnecter"><LogoutOutlined style={{ fontSize: '24px' }} /> </a>
                         </li>
                     </div>
                 </div>
