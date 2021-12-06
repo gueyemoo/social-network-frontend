@@ -64,7 +64,7 @@ const DiscoverPage = () => {
         <div className="discover-main-container">
         
             <Title level={3} className="discover-main-container-title">Découvrir</Title>
-            <SongGrid data={data_discover}/>
+            <SongGrid data={data_discover} discover={true}/>
         </div>
     )
 }

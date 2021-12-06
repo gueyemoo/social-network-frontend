@@ -1,0 +1,24 @@
+.ant-upload {
+  height: 500px !important;
+}
+
+.uploadZone {
+    display: flex;
+    // height: 500px;
+    width: 50% !important;
+  margin: 30px auto;
+  border: 1px solid black !important;
+}
+
+.confidentialZone{
+    display: flex;
+    justify-content: center;
+
+    input{
+        margin: 5px;
+    }
+}
+
+.confidentialInfo{
+    color: #707070;
+}

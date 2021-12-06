@@ -22,6 +22,7 @@ import ChatPage from './pages/ChatPage/ChatPage';
 import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
 import MusicGenderPage from './pages/MusicGenderPage/MusicGenderPage';
 import BiblioPage from './pages/BiblioPage/BiblioPage';
+import UploadPage from './pages/UploadPage/UploadPage';
 
 import ReactJkMusicPlayer from 'react-jinke-music-player'
 import 'react-jinke-music-player/assets/index.css'
@@ -292,6 +293,9 @@ function App() {
                     <Route exact path="/Bibliotheque">
                       <BiblioPage/>
                     </Route>
+                    <Route exact path="/Upload">
+                        <UploadPage/>
+                    </Route>
                   </Switch>
                 </div>
               </Layout>
@@ -313,7 +317,7 @@ function App() {
               </Slide>
             )}
             <div className="footer">
-              <ReactJkMusicPlayer mobileMediaQuery="(max-width: 1024px)" audioLists={audioList} />
+              <ReactJkMusicPlayer mobileMediaQuery="(max-width: 1024px)" audioLists={audioList} autoPlay={false} spaceBar={false} remember={true}/>
             </div>
           </div>
         </div >
