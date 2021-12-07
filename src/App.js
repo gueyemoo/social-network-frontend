@@ -23,6 +23,7 @@ import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
 import MusicGenderPage from './pages/MusicGenderPage/MusicGenderPage';
 import BiblioPage from './pages/BiblioPage/BiblioPage';
 import UploadPage from './pages/UploadPage/UploadPage';
+import ProfilPage from './pages/ProfilPage/ProfilPage';
 
 import ReactJkMusicPlayer from 'react-jinke-music-player'
 import 'react-jinke-music-player/assets/index.css'
@@ -88,187 +89,187 @@ function App() {
               {signup ? (
                 console.log("inscription = " + signup),
                 <div id="divForm"  >
-                <Row type="flex" justify="center" align="center">
-                  <Col span={16} >
-                <Form
-                  name="basic"
-                  initialValues={{
-                    remember: true,
-                  }}
-                  onFinish={onFinish}
-                  onFinishFailed={onFinishFailed}
-                  autoComplete="off"
-                >
-                  <legend>Inscrivez vous !</legend>
-                  <Form.Item
-                    label="Identifiant"
-                    name="username"
-                    rules={[
-                      {
-                        required: true,
-                        message: 'Saisissez votre identifiant!',
-                      },
-                    ]}
-                  >
-                    <Input />
-                  </Form.Item>
+                  <Row type="flex" justify="center" align="center">
+                    <Col span={16} >
+                      <Form
+                        name="basic"
+                        initialValues={{
+                          remember: true,
+                        }}
+                        onFinish={onFinish}
+                        onFinishFailed={onFinishFailed}
+                        autoComplete="off"
+                      >
+                        <legend>Inscrivez vous !</legend>
+                        <Form.Item
+                          label="Identifiant"
+                          name="username"
+                          rules={[
+                            {
+                              required: true,
+                              message: 'Saisissez votre identifiant!',
+                            },
+                          ]}
+                        >
+                          <Input />
+                        </Form.Item>
 
-                  <Form.Item
-                    label="Mot de passe"
-                    name="password"
-                    rules={[
-                      {
-                        required: true,
-                        message: 'Saisissez votre mot de passe!',
-                      },
-                    ]}
-                  >
-                    <Input.Password />
-                  </Form.Item>
+                        <Form.Item
+                          label="Mot de passe"
+                          name="password"
+                          rules={[
+                            {
+                              required: true,
+                              message: 'Saisissez votre mot de passe!',
+                            },
+                          ]}
+                        >
+                          <Input.Password />
+                        </Form.Item>
 
-                  <Form.Item
-                    label="Confirmez le mot de passe"
-                    name="confirm"
-                    rules={[
-                      {
-                        required: true,
-                        message: 'Confirmez votre mot de passe!',
-                      },
-                    ]}
-                  >
-                    <Input.Password />
-                  </Form.Item>
+                        <Form.Item
+                          label="Confirmez le mot de passe"
+                          name="confirm"
+                          rules={[
+                            {
+                              required: true,
+                              message: 'Confirmez votre mot de passe!',
+                            },
+                          ]}
+                        >
+                          <Input.Password />
+                        </Form.Item>
 
-                  <Form.Item
-                    name="remember"
-                    valuePropName="checked"
-                    wrapperCol={{
-                      offset: 0,
-                      span: 8,
-                    }}
-                  >
-                    <Checkbox>
-                        Se souvenir de moi</Checkbox>
-                  </Form.Item>
+                        <Form.Item
+                          name="remember"
+                          valuePropName="checked"
+                          wrapperCol={{
+                            offset: 0,
+                            span: 8,
+                          }}
+                        >
+                          <Checkbox>
+                            Se souvenir de moi</Checkbox>
+                        </Form.Item>
 
-                  <Form.Item
-                    wrapperCol={{
-                      offset: 0 ,
-                      span: 4,
-                    }}
-                  >
-                    <Button type="primary" htmlType="submit">
-                      Créer votre compte
-                    </Button>
-                  </Form.Item>
+                        <Form.Item
+                          wrapperCol={{
+                            offset: 0,
+                            span: 4,
+                          }}
+                        >
+                          <Button type="primary" htmlType="submit">
+                            Créer votre compte
+                          </Button>
+                        </Form.Item>
 
-                  <hr></hr>
-                    <br/>
-                  <Form.Item
-                    wrapperCol={{
-                      offset: 0,
-                      span: 8,
-                    }}
-                  >
-                    <label>Vous avez déjà un compte ?</label>
-                    <Button type="secondary" onClick={showForm}>
-                      Se connecter
-                    </Button>
-                  </Form.Item>
-                </Form>
-                </Col>
-                </Row>
+                        <hr></hr>
+                        <br />
+                        <Form.Item
+                          wrapperCol={{
+                            offset: 0,
+                            span: 8,
+                          }}
+                        >
+                          <label>Vous avez déjà un compte ?</label>
+                          <Button type="secondary" onClick={showForm}>
+                            Se connecter
+                          </Button>
+                        </Form.Item>
+                      </Form>
+                    </Col>
+                  </Row>
                 </div>
               ) : (
                 console.log("connection = " + signup),
 
-          <div id="divForm"  >
-            <Row type="flex" justify="center" align="center">
-              <Col span={16} >
-            <Form
-              name="basic"
-              initialValues={{
-                remember: true,
-              }}
-              onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
-              autoComplete="off"
-            >
-              <legend>Connectez vous !</legend>
-              <Form.Item
-                label="Identifiant"
-                name="username"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Saisissez votre identifiant!',
-                  },
-                ]}
-              >
-                <Input />
-              </Form.Item>
+                <div id="divForm"  >
+                  <Row type="flex" justify="center" align="center">
+                    <Col span={16} >
+                      <Form
+                        name="basic"
+                        initialValues={{
+                          remember: true,
+                        }}
+                        onFinish={onFinish}
+                        onFinishFailed={onFinishFailed}
+                        autoComplete="off"
+                      >
+                        <legend>Connectez vous !</legend>
+                        <Form.Item
+                          label="Identifiant"
+                          name="username"
+                          rules={[
+                            {
+                              required: true,
+                              message: 'Saisissez votre identifiant!',
+                            },
+                          ]}
+                        >
+                          <Input />
+                        </Form.Item>
 
-              <Form.Item
-                label="Mot de passe"
-                name="password"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Saisissez votre mot de passe!',
-                  },
-                ]}
-              >
-                <Input.Password />
-              </Form.Item>
+                        <Form.Item
+                          label="Mot de passe"
+                          name="password"
+                          rules={[
+                            {
+                              required: true,
+                              message: 'Saisissez votre mot de passe!',
+                            },
+                          ]}
+                        >
+                          <Input.Password />
+                        </Form.Item>
 
-              <Form.Item
-                name="remember"
-                valuePropName="checked"
-                wrapperCol={{
-                  offset: 0,
-                  span: 8,
-                }}
-              >
-                <Checkbox>
-                    Se souvenir de moi</Checkbox>
-              </Form.Item>
+                        <Form.Item
+                          name="remember"
+                          valuePropName="checked"
+                          wrapperCol={{
+                            offset: 0,
+                            span: 8,
+                          }}
+                        >
+                          <Checkbox>
+                            Se souvenir de moi</Checkbox>
+                        </Form.Item>
 
-              <Form.Item
-                wrapperCol={{
-                  offset: 0 ,
-                  span: 4,
-                }}
-              >
-                <Button type="primary" htmlType="submit">
-                  Se connecter
-                </Button>
-              </Form.Item>
+                        <Form.Item
+                          wrapperCol={{
+                            offset: 0,
+                            span: 4,
+                          }}
+                        >
+                          <Button type="primary" htmlType="submit">
+                            Se connecter
+                          </Button>
+                        </Form.Item>
 
-              <hr></hr>
-                <br/>
-              <Form.Item
-                wrapperCol={{
-                  offset: 0,
-                  span: 8,
-                }}
-              >
-                <label>Vous n'êtes pas inscrit ?</label>
-                  <Button type="secondary" onClick={showForm}>
-                    Créer un compte
-                  </Button>
-              </Form.Item>
-            </Form>
+                        <hr></hr>
+                        <br />
+                        <Form.Item
+                          wrapperCol={{
+                            offset: 0,
+                            span: 8,
+                          }}
+                        >
+                          <label>Vous n'êtes pas inscrit ?</label>
+                          <Button type="secondary" onClick={showForm}>
+                            Créer un compte
+                          </Button>
+                        </Form.Item>
+                      </Form>
+                    </Col>
+                  </Row>
+                </div>
+              )}
+
             </Col>
-            </Row>
-          </div>
-                )}
-              
-              </Col>
-            </Row>
+          </Row>
 
-            
-          </div>
-        ) : (
+
+        </div>
+      ) : (
         //if logged in        
         <div className="app">
           {/* set home page as default when rendering */}
@@ -291,10 +292,13 @@ function App() {
                     </Route>
                     <Route path="/Discover/:id" component={MusicGenderPage} />
                     <Route exact path="/Bibliotheque">
-                      <BiblioPage/>
+                      <BiblioPage />
                     </Route>
                     <Route exact path="/Upload">
-                        <UploadPage/>
+                      <UploadPage />
+                    </Route>
+                    <Route exact path="/Profil">
+                      <ProfilPage />
                     </Route>
                   </Switch>
                 </div>
@@ -317,7 +321,7 @@ function App() {
               </Slide>
             )}
             <div className="footer">
-              <ReactJkMusicPlayer mobileMediaQuery="(max-width: 1024px)" audioLists={audioList} autoPlay={false} spaceBar={false} remember={true}/>
+              <ReactJkMusicPlayer mobileMediaQuery="(max-width: 1024px)" audioLists={audioList} autoPlay={false} spaceBar={false} remember={true} />
             </div>
           </div>
         </div >

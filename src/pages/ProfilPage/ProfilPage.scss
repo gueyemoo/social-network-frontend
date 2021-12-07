@@ -1,0 +1,66 @@
+.ProfilPage-container {
+  max-height: 700px;
+  overflow-y: auto;
+  .profil-banner {
+    display: flex;
+
+    .profil-banner-left {
+      display: flex;
+      flex: 2;
+      margin: 30px;
+
+      .profil-banner-left-description {
+        p {
+          // max-width: 300px;
+          color: #707070;
+        }
+      }
+    }
+
+    .profil-banner-right {
+      margin-right: 100px;
+    }
+  }
+
+  .profil-menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    h2 {
+      cursor: pointer;
+      margin-right: 1rem;
+      &:hover {
+        color: #0000ff;
+      }
+    }
+  }
+}
+
+.profil-content{
+  .profil-content-main{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.card-grid-style-header {
+  font-weight: bold;
+  width: 33%;
+  text-align: center;
+  font-size: 24px;
+  cursor: default;
+
+  &:hover {
+    color: #ff7700;
+  }
+}
+
+.card-grid-style {
+  width: 33%;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
