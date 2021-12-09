@@ -15,6 +15,7 @@ import { Col } from 'antd';
       console.log('Success:', values);
       if (values.username !== null && values.username !== '')
         setLogin(!login);
+        props.passChildData2(login);
     };
   
     const onFinishFailed = (errorInfo) => {
@@ -102,7 +103,7 @@ import { Col } from 'antd';
                 span: 4,
               }}
             >
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" onClick={showForm}>
                 Créer votre compte
               </Button>
             </Form.Item>

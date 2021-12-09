@@ -88,7 +88,7 @@ function App() {
 
               {signup ? (
                 console.log("inscription = " + signup),
-                <Signup passChildData={setSignup}></Signup>
+                <Signup passChildData={setSignup} passChildData2={setLogin}></Signup>
               ) : (
                 console.log("inscription = " + signup),
 
