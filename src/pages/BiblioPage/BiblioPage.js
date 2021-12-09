@@ -69,18 +69,18 @@ const BiblioPage = () => {
 
             <div className="biblio-nav">
                 <h2 onClick={() => setHome(true)}>Aperçu</h2>
-                <h2 onClick={() => setHome(false)}>Favoris</h2>
-                <h2>Playlist</h2>
                 <h2>Albums</h2>
+                <h2>Playlist</h2>
+                <h2 onClick={() => setHome(false)}>Favoris</h2>
                 <h2>Amis</h2>
                 <h2>Historique</h2>
             </div>
             {home ? (
                 <div className="biblio-main">
                     <SectionGrid titre="Ecouté récemment" />
-                    <SectionGrid titre="Favoris" />
-                    <SectionGrid titre="Playlist" />
                     <SectionGrid titre="Albums" />
+                    <SectionGrid titre="Playlist" />
+                    <SectionGrid titre="Favoris" />
                     <SectionGrid titre="Amis" />
                     <SectionGrid titre="Historique" />
                 </div>

@@ -46,7 +46,7 @@ const NavBar = (props) => {
                         </li>
 
                         <li className="navbar-item-list">
-                            <a href=""><BellOutlined style={{ fontSize: '24px' }} /> </a>
+                            <NavLink to="/Profil"><BellOutlined style={{ fontSize: '24px' }} /> </NavLink>
                             <ul className="navbar-list-container" style={{zIndex:100}}>
                                 <li className="navbar-item-list"><NavLink exact to="/Bibliotheque">Consultez vos sons écoutez récemment </NavLink> <hr/></li>
                                 <li className="navbar-item-list"><NavLink exact to="/Chat">Vous avez reçu un nouveau message de Benjamin</NavLink> <hr/></li>
