@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './App.scss';
 
-import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { Layout } from 'antd';
 import { Form, Input, Button, Checkbox } from 'antd';
 import Fade from 'react-reveal/Fade';
@@ -49,8 +49,6 @@ function App() {
         'https://res.cloudinary.com/dfbypuwpt/video/upload/v1637935703/sade-smooth-operator-official-1984_zbil2y.mp3',
     },
   ]
-
-  const location = useLocation();
 
   const [childData, setChildData] = useState(false);
 
